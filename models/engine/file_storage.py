@@ -4,7 +4,6 @@ This module defines the FileStorage
 """
 
 import json
-from models.base_model import BaseModel
 
 
 class FileStorage():
@@ -19,6 +18,15 @@ class FileStorage():
 
     __file_path = "file.json"
     __objects = {}
+
+    def classes(self):
+        """
+        Returns a dictionary of classes
+        """
+        from models.base_model import BaseModel
+        classes = {"BaseModel": BaseModel}
+        
+        return classes
 
     def all(self):
         """
@@ -49,9 +57,9 @@ class FileStorage():
         try:
             with open(self.__file_path, "r") as f:
                 obj_dict = json.load(f)
-                for k, v in obj_dict.items():
-                    class_name = v.[__class__]
+                for key, value in obj_dict.items():
+                    class_name = value["__class__"]
                     if class_name == "BaseModel":
-                        self.__objects[k] = BaseModel(**v)
+                        self.__objects[key] = self.classes()[class_name](**value)
         except FileNotFoundError:
             pass
