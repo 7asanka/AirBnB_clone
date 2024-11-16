@@ -10,7 +10,8 @@ from models import storage
 
 class BaseModel:
     """
-    The BaseModel class defines all common attributes/methods for other classes.
+    The BaseModel class defines all common
+    attributes/methods for other classes.
     """
 
     def __init__(self, *args, **kwargs):
@@ -35,14 +36,16 @@ class BaseModel:
 
     def save(self):
         """
-        Updates the updated_at attribute to the current datetime and saves to storage.
+        Updates the updated_at attribute to
+        the current datetime and saves to storage.
         """
         self.updated_at = datetime.now()
         storage.save()
 
     def to_dict(self):
         """
-        Returns a dictionary containing all keys/values of the instance's __dict__,
+        Returns a dictionary containing all
+        keys/values of the instance's __dict__,
         with `created_at` and `updated_at` as ISO-formatted strings.
         """
         dict_rep = self.__dict__.copy()

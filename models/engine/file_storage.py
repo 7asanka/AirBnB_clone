@@ -8,7 +8,8 @@ import json
 
 class FileStorage:
     """
-    Serializes instances to a JSON file and deserializes JSON file to instances.
+    Serializes instances to a JSON file and
+    deserializes JSON file to instances.
     """
 
     __file_path = "file.json"
@@ -41,9 +42,9 @@ class FileStorage:
         try:
             with open(self.__file_path, "r") as f:
                 obj_dict = json.load(f)
-                for key, value in obj_dict.items():
-                    class_name = value["__class__"]
+                for k, v in obj_dict.items():
+                    class_name = v["__class__"]
                     if class_name in self.classes():
-                        self.__objects[key] = self.classes()[class_name](**value)
+                        self.__objects[k] = self.classes()[class_name](**v)
         except FileNotFoundError:
             pass
