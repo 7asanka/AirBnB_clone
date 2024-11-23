@@ -7,10 +7,7 @@ body{
 	font-family:Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.container {
+div .container {
 	max-width: 1000px;
-	top: 30px;
-	bottom: 30px;
-	margin-right: 0 auto;
-	margin-right: 0 auto;
+	margin: 30px auto;
 }
