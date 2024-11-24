@@ -6,12 +6,16 @@
 }
 
 .places h1 {
+	display: block;
+	width: 100%;
 	float: left;
 	text-align: left;
 	font-size: 30px;
+	margin-bottom: 0px;
 }
 
 .places article {
+	display: inline-block;
 	width: 390px;
 	padding: 20px;
 	margin: 20px;
@@ -25,3 +29,4 @@
 	padding: 0px;
 	margin: auto;
 }
+
