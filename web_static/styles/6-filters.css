@@ -31,7 +31,9 @@ div
 	height: 100%;
 	width: 20%;
 
-	margin-left: 50px;
+	
+	text-indent: 20%;
+	text-wrap: nowrap;
 }
 
 div
@@ -42,8 +44,10 @@ div
 	height: 100%;
 	width: 20%;
 
-	margin-left: 45px;
 	border-right: 1px solid #DDDDDD;
+
+	text-indent: 20%;
+	text-wrap: nowrap;
 }
 
 .filters h3 {
@@ -59,15 +63,26 @@ div
 	margin-bottom: 17px;
 }
 
-.filters .popover {
+.popover {
+	list-style-type: none;
 	background-color: #FAFAFA;
 	width: 100%;
+	margin: 0px;
 	border: 1px solid #DDDDDD;
 	border-radius: 4px;
 	display: none;
-	text-align: center;
 }
 
-.filters .popover:hover {
-	display: block;
+.locations:hover .popover,
+.filters .amenities:hover .popover{
+	display: inline-block;
+}
+
+ul {
+	padding: 0%;
+	padding-bottom: 10px;
+}
+
+.filters li{
+	list-style-type: none;
 }
