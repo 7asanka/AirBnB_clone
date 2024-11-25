@@ -1,8 +1,8 @@
 /*places style*/
 .places {
 	text-align: center;
-	display: block;
 	margin: 45px auto;
+	width: 100%;
 }
 
 .places h1 {
@@ -15,8 +15,9 @@
 }
 
 .places article {
-	display: inline-block;
+	display:inline-table;
 	width: 390px;
+	height: 390px;
 	padding: 20px;
 	margin: 20px;
 
@@ -48,7 +49,6 @@
 
 	font-size: 30px;
 	float: right;
-	text-wrap: nowrap;
 	line-height: 60px;
 }
 
